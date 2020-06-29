@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://xioyuna.com/envato/yui/mobile/ -->
+<html class="ios device-pixel-ratio-2 device-retina device-desktop support-position-sticky"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Required meta tags-->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>DPRD</title>
+    <link rel="stylesheet" href="./assets/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="./assets/css/ionicons.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+  <script></script></head>
+  <body class="color-theme-pink" cz-shortcut-listen="true">
+    <!-- App root element -->
+    <div id="app" class="framework7-root">
+      <div class="views tabs">
+        <!-- Main view -->
+    
+        <!-- Categories View -->
+        
+        <!-- Discover View -->
+        <div id="view-discover" class="view tab tab-active">
+          <div data-name="discover" class="page no-navbar page-current">
+            <!-- Scrollable page content -->
+            <div class="page-content">
+             
+              <!-- <div id="discover-swiper" class="swiper-container swiper-container-horizontal"> -->
+              
+              <div class="card1">
+                      <img class="card-image1" src="assets/img/header_1.jpg" alt="">
+                      <div class="card-infos">
+                        <h2 class="card-title"></h2>
+                      </div>
+                    </div>
+             
+              <div class="block">
+                <div class="title-medium-container title-with-link">
+                  <h2>DPRD KAB. NGANJUK</h2>
+                </div>
+                <ul class="popular-authors">
+                  <li>
+                    <a id="id10_38">
+                      <div class="author-image"><img src="assets/img/iconv2/dprd/dprd.png" alt=""></div>
+                      <div class="author-infos">
+                        <div class="author-name">DPRD KAB. NGANJUK</div>
+                        <div class="author-description">Portal Website DPRD Kab. Nganjukk</div>
+                      </div>
+                      <!-- <div class="author-star"><i class="icon ion-ios-star"></i></div> -->
+                    </a>
+                  </li>
+
+                  <li>
+                    <a id="id10_39">
+                      <div class="author-image"><img src="assets/img/iconv2/dprd/berita.png" alt=""></div>
+                      <div class="author-infos">
+                        <div class="author-name">BERITA</div>
+                        <div class="author-description">Berita DPRD Kab. Nganjukk</div>
+                      </div>
+                      <!-- <div class="author-star"><i class="icon ion-ios-star"></i></div> -->
+                    </a>
+                  </li>
+                  <li>
+                    <a id="id10_40">
+                      <div class="author-image"><img src="assets/img/iconv2/dprd/agenda.png" alt=""></div>
+                      <div class="author-infos">
+                        <div class="author-name">AGENDA</div>
+                        <div class="author-description">Agenda DPRD Kab. Nganjukk</div>
+                      </div>
+                      <!-- <div class="author-star"><i class="icon ion-ios-star"></i></div> -->
+                    </a>
+                  </li>
+                  <li>
+                    <a id="id10_41">
+                      <div class="author-image"><img src="assets/img/iconv2/dprd/kontak.png" alt=""></div>
+                      <div class="author-infos">
+                        <div class="author-name">KONTAK</div>
+                        <div class="author-description">Kontak DPRD Kab. Nganjukk</div>
+                      </div>
+                      <!-- <div class="author-star"><i class="icon ion-ios-star"></i></div> -->
+                    </a>
+                  </li>
+                
+                </ul>
+
+
+               
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- Search View -->
+        
+        <!-- Pages View -->
+        
+        <!-- Toolbar -->
+     <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+      <script type="text/javascript" src="assets/dist/materialize/js/materialize.min.js"></script>
+      <script src='assets/main.js'></script>
+      <script>
+        $( document ).ready(function() {
+            
+            function set(main, sub, url){
+  
+                $.ajax({
+                    url: "https://android.nganjukkab.go.id/counter/api/v1/setcounter?main="+main+"&sub="+sub,
+                    context: document.body
+                }).done(function() {
+                    window.location.href = url;
+                });
+  
+            }
+  
+            $('#id10_38').click(function(){
+                set(10, 38, 'http://www.dprdnganjukkab.go.id/');
+            })
+  
+            $('#id10_39').click(function(){
+                set(10, 39, 'http://www.dprdnganjukkab.go.id/berita.php');
+            })
+            $('#id10_40').click(function(){
+                set(10, 40, 'http://www.dprdnganjukkab.go.id/agenda.php');
+            })
+  
+            $('#id10_41').click(function(){
+                set(10, 41, 'http://www.dprdnganjukkab.go.id/kontak.php');
+            })
+        });
+      </script>
+  
+
+</body></html>

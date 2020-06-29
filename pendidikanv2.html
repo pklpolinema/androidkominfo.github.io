@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://xioyuna.com/envato/yui/mobile/ -->
+<html class="ios device-pixel-ratio-2 device-retina device-desktop support-position-sticky"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Required meta tags-->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Pendidikan</title>
+    <link rel="stylesheet" href="./assets/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="./assets/css/ionicons.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+  <script></script></head>
+  <body class="color-theme-pink" cz-shortcut-listen="true">
+    <!-- App root element -->
+    <div id="app" class="framework7-root">
+      <div class="views tabs">
+        <!-- Main view -->
+    
+        <!-- Categories View -->
+        
+        <!-- Discover View -->
+        <div id="view-discover" class="view tab tab-active">
+          <div data-name="discover" class="page no-navbar page-current">
+            <!-- Scrollable page content -->
+            <div class="page-content">
+             
+              <!-- <div id="discover-swiper" class="swiper-container swiper-container-horizontal"> -->
+              
+              <div class="card1">
+                      <img class="card-image1" src="assets/img/header_1.jpg" alt="">
+                      <div class="card-infos">
+                        <h2 class="card-title"></h2>
+                      </div>
+                    </div>
+             
+              <div class="block">
+                <div class="title-medium-container title-with-link">
+                  <h2>Pendidikan</h2>
+                </div>
+                <ul class="popular-authors">
+                  <li>
+                    <a id="id4_6">
+                      <div class="author-image"><img src="assets/img/iconv2/pendidikan/disdik.png" alt=""></div>
+                      <div class="author-infos">
+                        <div class="author-name">DISDIK KAB. NGANJUK</div>
+                        <div class="author-description">Jln. Dermojoyo No. 19 Nganjuk, Kode Pos 64418, (0358) 321667</div>
+                      </div>
+                      <!-- <div class="author-star"><i class="icon ion-ios-star"></i></div> -->
+                    </a>
+                  </li>
+
+                  <li>
+                    <a id="id4_7">
+                      <div class="author-image"><img src="assets/img/iconv2/pendidikan/sekolah.png" alt=""></div>
+                      <div class="author-infos">
+                        <div class="author-name">DATA SMA NEGERI</div>
+                        <div class="author-description">Data SMA Negeri di Kabupaten Nganjuk</div>
+                      </div>
+                      <!-- <div class="author-star"><i class="icon ion-ios-star"></i></div> -->
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a id="id4_8">
+                      <div class="author-image"><img src="assets/img/iconv2/pendidikan/sekolah.png" alt=""></div>
+                      <div class="author-infos">
+                        <div class="author-name">DATA SMK NEGERI</div>
+                        <div class="author-description">Data SMK Negeri di Kabupaten Nganjuk</div>
+                      </div>
+                      <!-- <div class="author-star"><i class="icon ion-ios-star"></i></div> -->
+                    </a>
+                  </li>
+
+                  <li>
+                    <a id="id4_9">
+                      <div class="author-image"><img src="assets/img/iconv2/pendidikan/sekolah.png" alt=""></div>
+                      <div class="author-infos">
+                        <div class="author-name">DATA MA NEGERI</div>
+                        <div class="author-description">Data MA Negeri di Kabupaten Nganjuk</div>
+                      </div>
+                      <!-- <div class="author-star"><i class="icon ion-ios-star"></i></div> -->
+                    </a>
+                  </li>
+                </ul>
+               
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- Search View -->
+        
+        <!-- Pages View -->
+        
+        <!-- Toolbar -->
+        
+        <script>
+    $( document ).ready(function() {
+        
+        function set(main, sub, url){
+
+            $.ajax({
+                url: "https://android.nganjukkab.go.id/counter/api/v1/setcounter?main="+main+"&sub="+sub,
+                context: document.body
+            }).done(function() {
+                window.location.href = url;
+            });
+
+        }
+
+        $('#id4_6').click(function(){
+            set(4, 6, 'https://disdik.nganjukkab.go.id/');
+        })
+
+        $('#id4_7').click(function(){
+            set(4, 7, 'smav2.html');
+        })
+        
+        $('#id4_8').click(function(){
+            set(4, 8, 'smkv2.html');
+        })
+
+        $('#id4_9').click(function(){
+            set(4, 9, 'manv2.html');
+        })
+    });
+</script>
+
+  
+
+</body></html>

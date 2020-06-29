@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nganjuk Control Center</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 99%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyCsi9kRUV6nwPfXSfDRQvHI-6DV15zY5lc",
+        authDomain: "newbieinfirebase.firebaseapp.com",
+        databaseURL: "https://newbieinfirebase.firebaseio.com",
+        projectId: "newbieinfirebase",
+        storageBucket: "newbieinfirebase.appspot.com",
+        messagingSenderId: "784582290086",
+        appId: "1:784582290086:web:26a63419d00322bb54a267"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+    <div id="map"></div>
+    <script>
+      var map;
+      var markers = new Array();
+      var database = firebase.database();
+      // var ref = database.ref('data').set({id:id});
+      var ref = database.ref();
+      ref.on('value', function (snapshot){
+        if(markers.length <= 0) {
+            putMarker(snapshot.val());
+        } else {
+            updateMarker(snapshot.val());
+        }
+      });
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -7.6044, lng: 111.8993}, //Nganjuk
+          zoom: 14
+        });
+      }
+      function putMarker(ref) {
+        var ids = new Array();
+        var i = 0;
+        Object.keys(ref).forEach(function(key) {
+            ids[i] = ref[key];
+            i++;
+        });
+        for (i = 0; i < ids.length; i++) { 
+            myLatLng = {lat: ids[i].location.latitude, lng: ids[i].location.longitude};
+            var icons;
+            
+            if(ids[i].type == "Damkar") {
+                icons = {url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"};
+                continue
+            } else if(ids[i].type == "Ambulans") {
+                icons = {url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"};
+                continue
+            } else if(ids[i].type == "TRC Dinsos") {
+              icons = {url:"http://maps.google.com/mapfiles/ms/icons/green-dot.png"};
+              continue
+            } else if(ids[i].type == "URCPJ") {
+              icons = {url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"};
+              continue
+            } else if(ids[i].type == "Skylift Dishub") {
+              icons = {url:"http://maps.google.com/mapfiles/ms/icons/purple-dot.png"};
+              continue
+            } else if (ids[i].type == "Rescue BPBD") {
+              icons = {url:"http://maps.google.com/mapfiles/ms/icons/orange-dot.png"};
+              continue
+            }
+
+            markers[i] = new google.maps.Marker({
+                position: myLatLng,
+                // myLatLng: ids[i].type == "Damkar",
+                map: map,
+                title: ids[i].type,
+                icon: icons
+            });
+        }
+      }
+
+      function updateMarker(ref) {
+        var ids = new Array();
+        var i = 0;
+        Object.keys(ref).forEach(function(key) {
+            ids[i] = ref[key];
+            i++;
+        });
+        for (i = 0; i < ids.length; i++) { 
+            myLatLng = {lat: ids[i].location.latitude, lng: ids[i].location.longitude};
+            markers[i].setPosition(myLatLng);
+        }
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjuvAjlXaME6kpBnOAg8074knzeNKfDG0&callback=initMap"
+    async defer></script>
+
+<!-- 
+akun google api keys 
+project : androidkominfo
+  <div>AIzaSyBzHzXJXxiKx1EmFK60Mia2t0n1PJDKiVk</div> -->
+
+<!-- <div>
+  <select>
+    <option>if rute 1 = tertampil rute 1
+else if rute 2 = tertampil rute 2</option>
+  </select>
+</div> -->
+
+  </body>
+</html>
+
+
+
+
+
+
+

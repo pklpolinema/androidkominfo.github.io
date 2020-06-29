@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://xioyuna.com/envato/yui/mobile/ -->
+<html class="ios device-pixel-ratio-2 device-retina device-desktop support-position-sticky"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Required meta tags-->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Kesehatan</title>
+    <link rel="stylesheet" href="./assets/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="./assets/css/ionicons.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+  <script></script></head>
+  <body class="color-theme-pink" cz-shortcut-listen="true">
+    <!-- App root element -->
+    <div id="app" class="framework7-root">
+      <div class="views tabs">
+        <!-- Main view -->
+    
+        <!-- Categories View -->
+        
+        <!-- Discover View -->
+        <div id="view-discover" class="view tab tab-active">
+          <div data-name="discover" class="page no-navbar page-current">
+            <!-- Scrollable page content -->
+            <div class="page-content">
+             
+              <!-- <div id="discover-swiper" class="swiper-container swiper-container-horizontal"> -->
+              
+              <div class="card1">
+                      <img class="card-image1" src="assets/img/header_1.jpg" alt="">
+                      <div class="card-infos">
+                        <h2 class="card-title"></h2>
+                      </div>
+                    </div>
+             
+              <div class="block">
+                <div class="title-medium-container title-with-link">
+                  <h2>Kesehatan</h2>
+                </div>
+                <ul class="popular-authors">
+                  <li>
+                    <a id="id1_1">
+                      <div class="author-image"><img src="assets/img/logoonly/kesehatan.png" alt=""></div>
+                      <div class="author-infos">
+                        <div class="author-name">RSUD Nganjuk</div>
+                        <div class="author-description">JL. Dr. Soetomo No. 62 Nganjuk, Jawa Timur</div>
+                      </div>
+                      <!-- <div class="author-star"><i class="icon ion-ios-star"></i></div> -->
+                    </a>
+                  </li>
+
+                  <li>
+                    <a id="id1_2">
+                      <div class="author-image"><img src="assets/img/logoonly/kesehatan.png" alt=""></div>
+                      <div class="author-infos">
+                        <div class="author-name">RSUD KERTOSONO</div>
+                        <div class="author-description"> Jl. Sudirman No.16, Kepuh, Kertosono, Kabupaten Nganjuk, Jawa Timur <br>
+              Telepon: (0358) 5501503</div>
+                      </div>
+                      <!-- <div class="author-star"><i class="icon ion-ios-star"></i></div> -->
+                    </a>
+                  </li>
+                
+                </ul>
+               
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- Search View -->
+        
+        <!-- Pages View -->
+        
+        <!-- Toolbar -->
+        
+<script>
+    $( document ).ready(function() {
+        
+        function set(main, sub, url){
+
+            $.ajax({
+                url: "https://android.nganjukkab.go.id/counter/api/v1/setcounter?main="+main+"&sub="+sub,
+                context: document.body
+            }).done(function() {
+                window.location.href = url;
+            });
+
+        }
+
+        $('#id1_1').click(function(){
+            set(1, 1, 'https://android.nganjukkab.go.id/nsc/rsudNganjuk.html');
+        })
+
+        $('#id1_2').click(function(){
+            set(1, 2, 'https://android.nganjukkab.go.id/nsc/rsudKertosono.html');
+        })
+    });
+</script>
+  
+
+</body></html>

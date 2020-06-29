@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://xioyuna.com/envato/yui/mobile/ -->
+<html class="ios device-pixel-ratio-2 device-retina device-desktop support-position-sticky"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Required meta tags-->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Nganjuk Smart City</title>
+    <link rel="stylesheet" href="./assets/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="./assets/css/ionicons.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+  <script></script></head>
+  <body class="color-theme-pink" cz-shortcut-listen="true">
+    <!-- App root element -->
+    <div id="app" class="framework7-root">
+      <div class="views tabs">
+        <!-- Main view -->
+    
+        <!-- Categories View -->
+        
+        <!-- Discover View -->
+        <div id="view-discover" class="view tab tab-active">
+          <div data-name="discover" class="page no-navbar page-current">
+            <!-- Scrollable page content -->
+            <div class="page-content">
+             
+              <!-- <div id="discover-swiper" class="swiper-container swiper-container-horizontal"> -->
+              
+              <div class="card1">
+                      <img class="card-image1" src="assets/img/header_1.jpg" alt="">
+                      <div class="card-infos">
+                        <h2 class="card-title"></h2>
+                      </div>
+                    </div>
+             
+              <div class="block">
+                <div class="title-medium-container title-with-link">
+                  <h2>Event Daerah</h2>
+                </div>
+                <ul class="popular-authors">
+                  <li>
+                    <a href="eventDaerahv2.php">
+                      <div class="author-image"><img src="assets/img/iconv2/event/eventbelum.png" alt=""></div>
+                      <div class="author-infos">
+                        <div class="author-name">Event Terdekat</div>
+                        <div class="author-description">Event Daerah yang belum berlangsung di wilayah Kabupaten Nganjuk</div>
+                      </div>
+                      <!-- <div class="author-star"><i class="icon ion-ios-star"></i></div> -->
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="eventDaerahBerlangsungv2.php">
+                      <div class="author-image"><img src="assets/img/iconv2/event/eventsudah.png" alt=""></div>
+                      <div class="author-infos">
+                        <div class="author-name">Event Telah Berlangsung</div>
+                        <div class="author-description">Event Daerah yang telah berlangsung di wilayah Kabupaten Nganjuk</div>
+                      </div>
+                      <!-- <div class="author-star"><i class="icon ion-ios-star"></i></div> -->
+                    </a>
+                  </li>
+                
+                </ul>
+               
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- Search View -->
+        
+        <!-- Pages View -->
+        
+        <!-- Toolbar -->
+        
+
+        <script>
+        $( document ).ready(function() {
+            
+            function set(main, sub, url){
+    
+                $.ajax({
+                    url: "https://android.nganjukkab.go.id/counter/api/v1/setcounter?main="+main+"&sub="+sub,
+                    context: document.body
+                }).done(function() {
+                    window.location.href = url;
+                });
+    
+            }
+    
+            $('#id2_3').click(function(){
+                set(2, 3, 'https://android.nganjukkab.go.id/nsc/obyekWisata.html');
+            })
+    
+            $('#id2_4').click(function(){
+                set(2, 4, 'https://android.nganjukkab.go.id/nsc/agendaWisata.php');
+            })
+        });
+    </script>
+
+</body></html>
